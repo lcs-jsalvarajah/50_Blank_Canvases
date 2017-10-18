@@ -22,20 +22,21 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
+//Create a starting point for traveling through perlin noise space
+var start = 0.0
+
+//Create a Perlin Noise Generator
+let p = PerlinGenerator()
+
 //Illustrate random noise generation
 for x in stride(from: 0, through: 400, by: 1) {
     
-    //Create a starting point for traveling through perlin noise space
-    var start = 0.0
-    
-    //Create a Perlin Noise Generator
-    let p = PerlinGenerator()
-    
+
     //Move through Perlin Noise Space
     start += 0.01 //Larger Means more Variation, smaller means less variation
     
     //Get Perlin Noise (gives us a random number between -1 to 1)
-let randomvalue = p.perlinNoise(x: start)
+    let randomvalue = p.perlinNoise(x: start)
     
     //Convert to a range between 0 and 100
     let height = map(value: randomvalue, fromLower: -1, fromUpper: 1, toLower: 0, toUpper: 100)
