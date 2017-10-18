@@ -29,7 +29,7 @@ for x in stride(from: 0, through: 400, by: 1) {
     let toY = random(from: 0, toButNotIncluding: 301)
     
     //Draw a Vertical line
-     canvas.fillColor = Color.init(hue: toY, saturation: x, brightness: 100, alpha: 90)
+     canvas.lineColor = Color.init(hue: toY, saturation: x, brightness: 100, alpha: 90)
     canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: toY)
    
 }

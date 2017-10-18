@@ -22,7 +22,37 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+//Illustrate random noise generation
+for x in stride(from: 0, through: 400, by: 1) {
+    
+    //Create a starting point for traveling through perlin noise space
+    var start = 0.0
+    
+    //Create a Perlin Noise Generator
+    let p = PerlinGenerator()
+    
+    //Move through Perlin Noise Space
+    start += 0.01 //Larger Means more Variation, smaller means less variation
+    
+    //Get Perlin Noise (gives us a random number between -1 to 1)
+let randomvalue = p.perlinNoise(x: start)
+    
+    //Convert to a range between 0 and 100
+    let height = map(value: randomvalue, fromLower: -1, fromUpper: 1, toLower: 0, toUpper: 100)
+    
+    //Decide how tall to draw the line
+    let toY = Int(height)
+    
+    //Set the Colour
+    canvas.lineColor = Color.init(hue: 159, saturation: 80, brightness: 100, alpha: 69)
+    
+    //Draw a Vertical line
+    
+    canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: toY)
+    
+}
+
+
 
 
 
