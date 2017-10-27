@@ -50,6 +50,22 @@ let anotherDecimalValue : Double = 5.5
 Int.min
 Int.max
 
+let canvas = Canvas(width: 300, height: 300)
+var randam = random(from: 1, toButNotIncluding: 3)
+
+
+for i in stride(from: 25, through: 275, by: 50) {
+    for i in stride(from: 25, through: 275, by: 50) {
+        canvas.drawEllipse(centreX: i, centreY: 75, width: 3, height: 3)
+        canvas.drawEllipse(centreX: i, centreY: 25, width: 3, height: 3)
+        canvas.fillColor = Color.init(hue: i, saturation: 100, brightness: 100, alpha: 100)
+        
+        
+    }
+}
+
+   
+
 
 /*:
  ## Use source control
