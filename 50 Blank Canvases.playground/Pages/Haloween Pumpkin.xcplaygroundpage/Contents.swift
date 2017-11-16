@@ -11,9 +11,13 @@
  */
 import Cocoa
 import PlaygroundSupport
+import Foundation
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 800, height: 600)
+
+//Make the base
+canvas.drawElipse(
 
 /*:
  ## Add your code below
@@ -46,3 +50,4 @@ let canvas = Canvas(width: 400, height: 300)
  */
 // Don't remove the code below
 PlaygroundPage.current.liveView = canvas.imageView
+

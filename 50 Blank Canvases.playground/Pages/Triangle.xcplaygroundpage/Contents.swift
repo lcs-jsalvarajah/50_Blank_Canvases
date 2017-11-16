@@ -22,7 +22,28 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Draw a triangle using the metaphor of a "turtule"
+
+//Step 1 : Draw and Rotate
+canvas.translate(byX: 75, byY: 100)
+canvas.drawAxes()
+canvas.defaultLineWidth = 5
+
+//Step 2 : Draw a side and rotate
+canvas.drawLine (fromX:0 ,fromY: 0,toX: 200 ,toY:0 )
+canvas.translate(byX: 200, byY: 0)
+canvas.rotate(by: 120)
+
+//Step 3 : Draw a side and rotate
+canvas.drawLine (fromX:0 ,fromY: 0,toX: 200 ,toY:0 )
+canvas.translate(byX: 200, byY: 0)
+canvas.rotate(by: 120)
+
+//Step 3 : Draw a side and rotate
+canvas.drawLine (fromX:0 ,fromY: 0,toX: 200 ,toY:0 )
+canvas.translate(byX: 200, byY: 0)
+canvas.rotate(by: 120)
+
 
 
 
@@ -46,4 +67,3 @@ let canvas = Canvas(width: 400, height: 300)
  */
 // Don't remove the code below
 PlaygroundPage.current.liveView = canvas.imageView
-
